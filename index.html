@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* GENERAL */
+      body {
+        font-family: "Sono", sans-serif;
+        background-color: rgb(22, 22, 22);
+        color: aliceblue;
+        text-align: center;
+      }
+      .app-title {
+        font-size: 5vh;
+        text-align: center;
+        background-color: rgb(32, 102, 32);
+        border-radius: 15px;
+        display: inline-block;
+        text-align: center;
+      }
+      .plan-price{
+        font-size: 20px;
+        margin-top: 9px;
+      }
+      .plan-features{
+        list-style-type: none;
+        text-align: center;
+        padding-left: 0%;
+      }
+      .plan-features li{
+        margin-bottom: 15px;
+      }
+      .plan-button {
+        font-family: "Sono", serif;
+        font-size: 18px;
+        background-color: rgb(32, 102, 32);
+        border: none;
+        border-radius: 10%;
+        color: aliceblue;
+        height: 2rem;
+        width: 6rem;
+      }
+      .plan-title {
+        font-size: xx-large;
+        font-weight: bold;
+      }
+      /* DIVS */
+      .pricing-container {
+        display: flex;
+        height: 70vh;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2rem;
+      }
+      .pricing-plan {
+        /* flex: 1; */
+        /* This ^ makes the divs inside the container have the same proportion :) */
+        /* But the div with the largest sentence will have a higher width than the others */
+        background-color: rgb(40, 40, 40);
+        border-radius: 15px;
+        text-align: center;
+        padding: 25px;
+        min-width: 400px;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column;
+          height: 100%;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1 class="app-title">Popular Music APP Premium Plans</h1>
+
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">1 Month</div>
+        <div class="plan-price">Single Payment <b>$3.99</b></div>
+        <ul class="plan-features">
+          <li>Premium plan</li>
+          <li>Starting today</li>
+          <li><u>Offer terms</u> apply </li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">6 Months</div>
+        <div class="plan-price">Single Payment <b>$19.99</b></div>
+        <ul class="plan-features">
+          <li>Premium plan</li>
+          <li>One time payment</li>
+          <li><u>Offer terms</u> apply </li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">1 Year</div>
+        <div class="plan-price">Single Payment <b>$39.99</b></div>
+        <ul class="plan-features">
+          <li>Premium plan</li>
+          <li>One time payment</li>
+          <li><u>Offer terms</u> apply </li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+    <footer><p>© 2024 Copyright</p> <p>The <i><s>you know what</s></i> company</p></footer>
+  </body>
+</html>
